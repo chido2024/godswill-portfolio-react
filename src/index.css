@@ -3,42 +3,715 @@
   --secondary-color: #03dac6;
   --background-color: #f5f5f5;
   --text-color: #333;
-  --font-family: 'Roboto', sans-serif;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: "poppins", sans-serif;
 }
 
 body{
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  background: rgb(42, 40, 40);
+  color: white;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+.navbar{
+  background-color: rgb(30, 28, 28);
+  height: 5rem;
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+
+
+.logo{
+  object-fit: cover;
+  height: 3rem;
+  width: 4rem;
+}
+
+.desktopMenuListitem{
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.desktopMenuListitem:hover{
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid yellow; 
+}
+
+.active{
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid yellow;
+}
+
+.desktopMenuBtn{
+  background: whitesmoke;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 10rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#intro{
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg{
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 70vh;
+}
+
+.Introimg{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+
+}
+
+
+.Introcontent{
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello{
+  font-size: 1.75rem;
+ font-weight: 100;
+}
+
+.Intropara{
+  font-size: medium;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.role{
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.IntroBtn{
+  background: whitesmoke;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 10rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.IntroBtn:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#skills{
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  margin: 0 auto;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.skillTitle{
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-li {
-  display: inline-block;
-  margin-right: 10px;
+.skillDesc{
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
+.skillBars{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+.skillBar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.skillsBarText>p{
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.skillBarimg{
+  height: 70px;
+  width: 70px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.works{
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+  row-gap: 2rem;
 }
+
+.worksTitle{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: auto;
+  color: white;
+}
+
+.worksDesc{
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.worksImgs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 10rem;
+  align-items: center;
+  text-align: left;
+  object-fit: cover;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+
+.worksBtn{
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem 2 5rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 10rem;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.clientsTitle{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: auto;
+  color: white;
+}
+
+.clientsDesc{
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.clientsImgs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 10rem;
+  align-items: center;
+  text-align: left;
+  object-fit: cover;
+  row-gap: 1rem;
+  column-gap: 1rem;
+} 
+
+.contacts{
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contactsTitle{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: auto;
+  color: white;
+}
+
+.contactsPara{
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 60rem;
+  padding: 1rem;
+  border-radius: 1rem;
+   padding: 10px 15px;
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 5px;
+  color: #03045e;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.contactForm input, .contactForm textarea{
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #03045e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contactForm input::placeholder, .contactForm textarea::placeholder{
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0.5rem;
+}
+
+.contactForm input{
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contactBtn{
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #03045e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  align-items: center;
+  background: rgb(42, 40, 40) none repeat scroll 0% 0%;
+}
+
+.contactBtn:hover{
+  background-color: #023e8a;
+
+}
+
+.nane, .email, .msg{
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #03045e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.icon{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0.5rem;
+
+}
+
+.react-icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0.5rem;
+}
+
+.footer{
+  width:100vw;
+  height: 4rem;
+  background: rgb(80, 70, 70) none repeat scroll 0% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: small;
+}
+
+.active{
+  color: dodgerblue;
+  border-bottom: 2px solid dodgerblue;
+  padding-bottom: 0.5rem;
+}
+
+.VscMenu{
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 4;
+}
+
+@media screen and (max-width: 401px) {
+  .bg{
+    right: -20vw;
+  }
+
+  .navbar{
+    padding: 1rem;
+  }
+  .logo{
+    height: 2.5rem;
+    width: 3rem;
+  }
+    .desktopMenuListitem{
+      font-size: 1rem;
+    }
+  .desktopMenuBtn{
+    font-size: 1rem;
+  }
+  .Introcontent{
+    font-size: 1.5rem;
+  } 
+  .hello{
+    font-size: 1.25rem;
+  }
+
+  .Intropara{
+    font-size: 0.875rem;
+  } 
+
+  .role{
+    font-size: 1.25rem;
+  }
+
+  .IntroBtn{
+    font-size: 1rem;
+    width: 8rem;
+  }
+
+  .skillTitle{
+    font-size: 1.5rem;
+  }
+
+  .skillDesc{
+    font-size: 1rem;
+  }
+
+  .skillsBarText>p{
+    font-size: 0.875rem;
+  }
+  .skillBarimg{ 
+    height: 50px;
+    width: 50px;
+  }
+  .skillBar{  
+    margin: 0.5rem;
+  }
+  .skillBars{
+    flex-direction: column;
+    align-items: center;
+  }
+  .skillBar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .skillsBarText>p{
+    font-size: 2vw;
+  }
+
+  .skillBarimg{
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  .skillBarText>h2{
+    font-size: 5vw;
+  }
+
+  .worksTitle{
+    font-size: 1.5rem;
+  }
+  .worksDesc{
+    font-size: 1rem;
+  }
+  .worksImgs{
+    flex-direction: column;
+    row-gap: 1rem;
+    column-gap: 0;
+  }
+  .worksImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .worksImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  .worksBtn{
+    font-size: 1rem;
+    width: 8rem;
+    height: 2rem;
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+  }
+  .contactsTitle{
+    font-size: 1.5rem;
+  }
+  .contactPage{
+    padding: 2rem;
+
+  }
+  .contactsPara{
+    font-size: 1rem;
+  }
+  .contactsBtn{
+    font-size: 1rem;
+    width: 8rem;
+    height: 2rem;
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+  }
+  .contactForm input, .contactForm textarea{
+    font-size: 0.875rem;
+    padding: 0.75rem;
+  }
+  .contactForm input::placeholder, .contactForm textarea::placeholder{
+    font-size: 0.875rem;
+  }
+  .clienttsTitle{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .clientDesc{
+    font-size: 1rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+  }
+  .clientsImgs{
+    flex-direction: column;
+    row-gap: 1rem;
+    column-gap: 0;
+  }
+  .clientsImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clientsImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  .contactForm button{
+    font-size: 1rem;
+    width: 8rem;
+    height: 2rem;
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+  }
+  .icon{
+    font-size: 1.5rem;
+  }
+  .react-icon{
+    font-size: 1.5rem;
+  }
+  .footer{
+    font-size: 1rem;
+  }
+  .footer{
+    width: 100vw;
+    height: 4rem;
+    background: rgb(80, 70, 70) none repeat scroll 0% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: small;
+  }
+  .active{
+    font-size: 1rem;
+  }
+  .active{
+    color: dodgerblue;
+    border-bottom: 2px solid dodgerblue;
+    padding-bottom: 0.5rem;
+  }
+  .desktopMenuListitem{
+    font-size: 1rem;
+  }
+  .desktopMenuBtn{
+    font-size: 1rem;
+  }
+  .navbar{
+    padding: 1rem;
+  }
+  .VscMenu{
+    display: block;
+  }
+  .mobileMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(42, 40, 40);
+    z-index: 1;
+  }
+  .logo{
+    height: 2.5rem;
+    width: 3rem;
+  };
+}
+
+/* Fixed: Added missing closing brace above for the first @media block */
+

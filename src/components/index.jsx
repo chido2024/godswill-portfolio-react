@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import Navbar from "./navbar/Navbar";
-import About from "./about/About";
-import Contact from "./contact/Contact";
-import Services from "./services/Services";
-import Projects from "./projects/Projects";
-import Footer from "./footer/Footer";
-import "./App.css";
+import Works from "./works/Works"
+import Intro from "./Intro/Intro"
+import Navbar from "./Navbar/Navbar"
+import Skills from "./skills/Skills"
 
-export{
- Navbar,
- About,
- Contact,
- Services,
- Projects,
- Footer
+
+
+export {
+    Works,
+    Intro,
+    Navbar,
+    Skills,
+  
 }

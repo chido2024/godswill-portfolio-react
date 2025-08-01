@@ -1,9 +1,14 @@
-import "./App.css";
-import Navbar from "./components/navbar/Navbar";
-import About from "./components/about/About";
-import Services from "./components/services/Services";
-import Projects from "./components/projects/Projects";
-import Contacts from "./components/contacts/Contacts";
+import Navbar from "./components/Navbar/Navbar"
+import Intro from "./components/Intro/Intro"
+import Skills from "./components/skills/Skills"
+import Works from "./components/works/Works"
+import Contacts from "./components/contacts/Contacts"
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import Footer from "./components/footer/Footer";
 
 
@@ -12,11 +17,19 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <About />
-      <Services />
-      <Projects />
+      <Intro />
+      <Skills />
+      <Works />
       <Contacts />
-      <Footer />
+      <FaFacebookF />
+      <FaTwitter />
+      <FaLinkedin />
+      <FaGithub />
+      <FaEnvelope />
+      <FaPhone />
+      <Footer/>
+     
+     
     </div>
   );
 };
